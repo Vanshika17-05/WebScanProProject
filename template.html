@@ -1,0 +1,26 @@
+
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <title>WebScanPro Security Report</title>
+                <style>
+                    body { font-family: 'Arial', sans-serif; background-color: #f4f4f9; color: #333; margin: 0; padding: 20px; }
+                    .container { max-width: 800px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+                    h1 { text-align: center; color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+                    .finding { background: #fff; border: 1px solid #ddd; border-left: 5px solid #333; margin-bottom: 15px; padding: 15px; border-radius: 4px; }
+                    .finding h2 { margin-top: 0; color: #444; font-size: 18px; }
+                    .detail-code p { margin: 5px 0; font-size: 14px; }
+                    .severity-high { color: #d9534f; font-weight: bold; text-transform: uppercase; }
+                    .severity-medium { color: #f0ad4e; font-weight: bold; text-transform: uppercase; }
+                    .severity-low { color: #5cb85c; font-weight: bold; text-transform: uppercase; }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>WebScanPro Security Report</h1>
+                    <div class="content">{{ content }}</div>
+                </div>
+            </body>
+            </html>
+            
