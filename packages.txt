@@ -1,0 +1,3 @@
+
+libcario2-dev
+pkg-config
