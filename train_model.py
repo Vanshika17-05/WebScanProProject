@@ -44,7 +44,7 @@ print("🧠 Training Model... (This might take a minute)")
 # --- 3. BUILD PIPELINE ---
 model = make_pipeline(
     TfidfVectorizer(tokenizer=make_tokens, token_pattern=None, lowercase=True),
-    RandomForestClassifier(n_estimators=100, n_jobs=-1, class_weight="balanced")
+    RandomForestClassifier(n_estimators=10, n_jobs=-1, class_weight="balanced")
 )
 
 model.fit(X_train, y_train)
@@ -58,4 +58,5 @@ print("\nDetailed Report:\n", classification_report(y_test, y_pred))
 
 # --- 5. SAVE ---
 joblib.dump(model, "vuln_model.pkl")
+
 print("💾 Model saved as 'vuln_model.pkl'")
