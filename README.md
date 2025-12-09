@@ -1,26 +1,44 @@
-# 🛡 WebScanPro: AI-Powered Vulnerability Scanner
 
-*A high-performance, full-stack security tool designed to detect web vulnerabilities using Multi-threading and Machine Learning.*
+# 🛡️ WebScan Pro - AI-Powered Security Suite
 
----
+**WebScan Pro** is a comprehensive cybersecurity tool designed to detect malicious URLs, potential phishing attacks, and server vulnerabilities using Machine Learning and automated auditing techniques.
 
-## 🚀 Project Overview
-WebScanPro is an advanced vulnerability scanner developed to identify common security threats like *SQL Injection (SQLi)* and *Cross-Site Scripting (XSS). unlike traditional regex-based scanners, WebScanPro integrates a **Naive Bayes Machine Learning model* to intelligently classify malicious payloads with high accuracy.
+## 🚀 Key Features
 
-## ⚡ Key Features (Resume Highlights)
-* *🧠 AI-Driven Detection:* Integrated a custom-trained Naive Bayes classifier (scikit-learn) to detect malicious input patterns, significantly reducing false positives compared to static analysis.
-* *🚀 High-Speed Concurrency:* Implemented a multi-threaded architecture using concurrent.futures, allowing the tool to scan *5+ targets simultaneously, improving performance by **400%*.
-* *☁ Automated Cloud Sync:* Configured a GitDoc workflow for real-time version control and automated updates to GitHub.
-* *📊 Smart Analysis:* Utilizes pandas for efficient data handling and payload processing during model training.
+* **🧠 AI Vulnerability Scanner:** Uses a Random Forest model trained on 40,000+ URLs to predict if a link is safe or malicious (Phishing/Malware).
+* **🕷️ Web Crawler:** Automatically maps out a target website, discovering hidden links and pages.
+* **🔌 Port Scanner:** Audits the target server for open network ports (FTP, SSH, HTTP, etc.) to identify entry points.
+* **🔓 Login Auditor:** Performs dictionary attacks on login pages to test for weak credentials (e.g., "admin123").
+* **📄 PDF Reporting:** Generates professional-grade security reports with a single click.
 
-## 🛠 Tech Stack
-* *Language:* Python 3.12
-* *AI/ML:* Scikit-Learn, Pandas, Pickle
-* *Networking:* Requests, Concurrent.Futures
-* *Version Control:* Git, GitHub
+## 📊 Performance
+* **Model Accuracy:** [YOUR ACCURACY HERE]% (Calculated on test split)
+* **Algorithm:** Random Forest Classifier with Custom Tokenization (TF-IDF).
 
-## 💻 How to Run
+## 🛠️ Tech Stack
+* **Language:** Python 3.9+
+* **Machine Learning:** Scikit-Learn, Pandas, Joblib
+* **Web Framework:** Streamlit
+* **Tools:** BeautifulSoup4 (Crawling), Socket (Networking), ReportLab/XHTML2PDF (Reporting)
 
-### 1. Install Dependencies
-```bash
-pip install -r requirements.txt
+## 📦 Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/your-username/WebScan-Pro.git](https://github.com/your-username/WebScan-Pro.git)
+    ```
+2.  Install dependencies:
+    ```bash
+    pip install pandas scikit-learn streamlit requests beautifulsoup4 xhtml2pdf
+    ```
+3.  Train the Model:
+    ```bash
+    python train_model.py
+    ```
+4.  Run the Dashboard:
+    ```bash
+    streamlit run dashboard.py
+    ```
+
+## ⚠️ Disclaimer
+This tool is for **Educational Purposes Only**. Do not use this tool on websites you do not own or do not have explicit permission to scan. The developer is not responsible for misuse.
