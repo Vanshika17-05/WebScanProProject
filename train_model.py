@@ -49,7 +49,7 @@ if not url_col:
     # The column with few unique values is likely the label
     print("⚠️ Could not find column named 'url'. Guessing based on data...")
     url_col = df.columns[0] 
-    Label_col = df.columns[-1]
+    label_col = df.columns[-1]
 
 print(f"   -> Using '{url_col}' as URL data.")
 print(f"   -> Using '{label_col}' as Label data.")
@@ -78,3 +78,4 @@ try:
 except Exception as e:
 
     print(f"❌ Training Failed: {e}")
+
