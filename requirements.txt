@@ -6,4 +6,3 @@ requests
 xhtml2pdf
 jinja2
 beautifulsoup4
-libcairo2-dev
