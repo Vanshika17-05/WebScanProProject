@@ -49,7 +49,7 @@ if not url_col:
     # The column with few unique values is likely the label
     print("⚠️ Could not find column named 'url'. Guessing based on data...")
     url_col = df.columns[0] 
-    label_col = df.columns[-1]
+    Label_col = df.columns[-1]
 
 print(f"   -> Using '{url_col}' as URL data.")
 print(f"   -> Using '{label_col}' as Label data.")
@@ -76,4 +76,5 @@ try:
     joblib.dump(model, "vuln_model.pkl")
     print("🚀 SUCCESS! System is upgraded with Real-World Data.")
 except Exception as e:
+
     print(f"❌ Training Failed: {e}")
