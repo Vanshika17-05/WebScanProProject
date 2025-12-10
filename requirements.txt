@@ -1,0 +1,8 @@
+streamlit
+pandas
+scikit-learn
+joblib
+requests
+xhtml2pdf
+jinja2
+beautifulsoup4

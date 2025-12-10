@@ -1,0 +1,56 @@
+
+   <!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Helvetica, sans-serif; color: #333; }
+        .header { text-align: center; border-bottom: 2px solid #444; padding-bottom: 10px; margin-bottom: 20px; }
+        .header h1 { color: #2c3e50; }
+        
+        /* Dynamic Box Colors */
+        .status-box { padding: 15px; border-radius: 5px; color: white; text-align: center; font-size: 20px; font-weight: bold; }
+        .safe { background-color: #28a745; }   /* GREEN */
+        .danger { background-color: #dc3545; } /* RED */
+        
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🛡️ WebScan Pro - Security Report</h1>
+        <p>Generated on: {{ date }}</p>
+    </div>
+
+    <div class="status-box {{ status_class }}">
+        VERDICT: {{ prediction }}
+    </div>
+
+    <h3>🔍 Scan Details</h3>
+    <table>
+        <tr>
+            <th>Target URL</th>
+            <td>{{ url }}</td>
+        </tr>
+        <tr>
+            <th>Confidence Score</th>
+            <td>{{ confidence }}%</td>
+        </tr>
+    </table>
+
+    <h3>💡 Recommendation</h3>
+    <p>
+        {% if prediction == "BAD" %}
+        ⚠️ <strong>CRITICAL WARNING:</strong> This URL matches known malicious patterns (Phishing/Malware). 
+        <strong>Immediate Action Required:</strong> Do not click this link. Block it in your firewall.
+        {% else %}
+        ✅ <strong>Safe:</strong> No obvious threats were detected in the URL structure.
+        {% endif %}
+    </p>
+
+    <div style="margin-top: 50px; text-align: center; font-size: 12px; color: #777;">
+        Automated Report by WebScan Pro AI
+    </div>
+</body>
+</html>         
